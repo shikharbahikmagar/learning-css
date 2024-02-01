@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 80%;
+            width: 100%;
+            z-index: -2;
+            object-fit: cover;
+        }
+        nav{
+            top: 0;
+            left: 0; 
+            font-size: larger; 
+        } 
+        ul{
+            color: black;
+            list-style: none;
+        }
+        #logo{
+            margin-left: 90px;
+            color: black;
+            letter-spacing: 3px;
+
+        }
+        .navs:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .navs{
+            letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+<body style="background-color: black; color: white;">
+    <section>
+        <div>
+                <video id="media" src="2.mp4" autoplay muted loop></video>
+            <header>
+                
+                <nav style="display: flex; justify-items: center; align-items: center;">
+                    <div id="logo">PEACE</div>
+                    <ul style="display: flex; margin-left: 50%; ">
+                        <li class="navs"  style="padding-left: 40px;">Home</li>
+                        <li class="navs" style="padding-left: 40px;">About</li>
+                        <li class="navs" style="padding-left: 40px;">contact</li>
+                    </ul>
+                </nav>
+                <div style="margin-left: 20%; margin-top: 150px; font-size: xx-large;">
+                    <h1 style="color: black;">Live A <span style="color: green;">PeaceFull</span> Life</h1>
+                </div>
+            </header>
+        </div>
+    </section>
+</body>
+</html>

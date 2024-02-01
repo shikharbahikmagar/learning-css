@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Blog</title>
+    <style>
+        #media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            z-index: -2;
+            object-fit: cover;
+        }
+
+        nav {
+            top: 0;
+            left: 0;
+            font-size: larger;
+        }
+
+        ul {
+            color: white;
+            list-style: none;
+        }
+
+        #logo {
+            margin-left: 90px;
+            color: white;
+            letter-spacing: 3px;
+
+        }
+        .navs {
+            letter-spacing: 2px;
+            transition: text-decoration-color .6s ease-in-out;
+            text-decoration-color: transparent;
+            text-underline-offset: 8px;
+
+        }
+        .navs:hover {
+            text-decoration: underline;
+            text-decoration-color: white;
+            cursor: pointer;
+            
+        }
+
+        
+        #login_btn{
+            background-color: rgb(128, 19, 206);
+            color: white;
+            padding: 15px;
+            border-radius: 14px;
+            /* transition-property: background-color;
+            transition-duration: .4s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s; */
+            transition: background-color .4s ease-in-out;
+            
+        }
+        #login_btn:hover{
+            background-color: rgb(78, 184, 184);
+            color: white;
+        }
+        #hasServices .services{
+            /* display: none; */
+            /* overflow: hidden; */
+            min-width: 200px;
+            margin-top: 10px;
+            visibility: hidden;
+            background-color: rgb(21, 21, 21);
+            border-radius: 5px;
+            padding: 0;
+            position: absolute;
+            opacity: 0;
+            transition-property: opacity, visibility;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+            z-index: 999;
+            
+        }
+         #hasServices:hover .services{
+            /* display: block; */
+            /* overflow: visible; */
+            opacity: 1;
+            visibility: visible;
+            
+            
+            /* visibility: visible;
+            opacity: 1; */
+            color: blue;
+        }
+         #hasServices .services li{
+            padding: 10px;
+            margin-top: 5px;
+            background-color: rgb(65, 62, 62);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            position: relative;
+            transition: padding .3s ease-in-out;           
+                     }
+         /* #hasServices {
+            min-width: 200px;
+            
+         }
+         */
+         #hasServices .services li:hover{
+            color: aqua;
+            padding-left: 15px;
+        }
+
+       /* image container */
+        .image_box{
+            /* margin-top: 150px; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 6px;
+            justify-items: center;
+                    }
+        .image{
+            height: 400px;
+            width: 300px;
+           z-index: 1;
+            cursor: pointer;
+        }
+        .img_container{
+            height: 400px;
+            width: 300px;
+            margin-top: 10px;
+            /* inset: 0;
+             background: linear-gradient(180deg, rgba(21, 22 24, 0.24) 0% ,  #151618 100%); */
+        }
+        .content{
+            visibility: hidden;
+            opacity: 0;
+            margin-top: -200px;
+            text-align: center;
+            transition-property: opacity, visibility;
+            transition-duration: .4s;
+           transition-timing-function: ease-in-out;
+            
+        }
+        .image:hover + .content{
+            visibility: visible;
+            opacity: 1;
+        }
+        /* .opa{
+            background-color: green;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            z-index: -4;
+            opacity: 0.3;
+        } */
+    </style> 
+</head>
+
+<body style="background-color: black; color: white;">
+    <section>
+        <div>
+            <video id="media" src="2.mp4" autoplay muted loop></video>
+            <header>
+                <nav style="display: flex; align-items: center;">
+                    <div id="logo">PEACE</div>
+                    <ul style="display: flex; gap: 40px; margin-left: 50%;">
+                        <li class="navs" id="hasServices" >Home
+                        <ul class="services" style="z-index: 5;">
+                            <li class="serv">test1 <i class="fa-solid fa-arrow-right"></i></li>
+                            <li class="serv">test2</li>
+                            <li class="serv">test 3</li>
+                        </ul>
+                        </li>
+                        <li class="navs">About</li>
+                        <li class="navs">contact</li>
+                    </ul>
+                    <div style="margin-left: 40px;">
+                        <button id="login_btn">Login/Register</button>
+                    </div>
+                </nav>
+                <div style="margin-left: 20%; margin-top: 150px; font-size: xx-large;">
+                    <h1 style="color: black;">Live A <span style="color: green;">PeaceFull</span> Life</h1>
+                </div>
+            </header>
+        </div>
+    </section>
+    <img src="assets/6.jpg" style="margin-top: 90px;" height="200px" width="100%" alt="">
+    <section class="image_box">
+        <div class="img_container">
+            <div class="opa"></div>
+            <img class="image" src="assets/1.jpg" alt="">
+            <div class="content">
+                <h2 style="margin-top: -200px; text-align: center;">test</h2>
+                <p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nisi enim magni delectus eaque libero, dolore
+                    assumenda corrupti. Enim laboriosam fugit maxime hic consequuntur repellendus, ut veritatis recusandae voluptate
+                    optio!</p>
+                <button style="padding: 8px; border-radius: 5px; background-color: aquamarine;">More Info</button>
+            </div>
+        </div>
+        <div class="img_container">
+            <img class="image" src="assets/2.jpg" alt="">
+            <div class="content">
+                <button style="position: relative; margin-top: -500px; padding: 8px; border-radius: 5px; background-color: aquamarine;">More Info</button>
+                <p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nisi enim
+                    magni delectus eaque libero, dolore
+                    assumenda corrupti. Enim laboriosam fugit maxime hic consequuntur repellendus, ut veritatis recusandae
+                    voluptate
+                    optio!</p>
+            </div>
+        </div>
+        <div class="img_container">
+            <img class="image" src="assets/3.jpg" alt="">
+            <div class="content">
+                <h2 style="margin-top: -200px; text-align: center;">test</h2>
+                <p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nisi enim
+                    magni delectus eaque libero, dolore
+                    assumenda corrupti. Enim laboriosam fugit maxime hic consequuntur repellendus, ut veritatis recusandae
+                    voluptate
+                    optio!</p>
+            </div>
+        </div>
+        <div class="img_container">
+            <img class="image" src="assets/4.jpg" alt="">
+            <div class="content">
+                <h2 style="margin-top: -200px; text-align: center;">test</h2>
+                <p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nisi enim
+                    magni delectus eaque libero, dolore
+                    assumenda corrupti. Enim laboriosam fugit maxime hic consequuntur repellendus, ut veritatis recusandae
+                    voluptate
+                    optio!</p>
+            </div>
+        </div>
+        <div class="img_container">
+            <img class="image" src="assets/5.jpg" alt="">
+            <div class="content">
+                <h2 style="margin-top: -200px; text-align: center;">test</h2>
+                <p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nisi enim
+                    magni delectus eaque libero, dolore
+                    assumenda corrupti. Enim laboriosam fugit maxime hic consequuntur repellendus, ut veritatis recusandae
+                    voluptate
+                    optio!</p>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
